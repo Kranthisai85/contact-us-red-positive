@@ -33,9 +33,9 @@ exports.contactUs = (req, res) => {
     
     const mailOptions = {
         from: req.body.name+'" " <nodejsa@gmail.com>', // sender address
-        to: email, // list of receivers
+        to: 'info@redpositive.in,kranthisai85@gmail.com', // list of receivers
         subject: "Message from "+req.body.name+" via Contact Us", // Subject line
-        text: "Phone : "+req.body.phone+" \nMessage : "+req.body.message, // html body
+        text: "Email : "+req.body.email+"\nPhone : "+req.body.phone+" \nMessage : "+req.body.message, // html body
     };
     
     transporter.sendMail(mailOptions, (error, info) => {
