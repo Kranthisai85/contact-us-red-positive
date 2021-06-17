@@ -43,7 +43,7 @@
 					        			<span class="fa fa-phone"></span>
 					        		</div>
 					        		<div class="text">
-						            <p><span>Phone:</span> <a href="tel://1234567920">+91-8005563581</a></p>
+						            <p><span>Phone:</span> <a href="tel://8005563581">+91-8005563581</a></p>
 						          </div>
 					          </div>
 									</div>
@@ -53,7 +53,7 @@
 					        			<span class="fa fa-paper-plane"></span>
 					        		</div>
 					        		<div class="text">
-						            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@redpositive.in</a></p>
+						            <p><span>Email:</span> <a href="mailto:info@redpositive.in">info@redpositive.in</a></p>
 						          </div>
 					          </div>
 									</div>
@@ -81,7 +81,7 @@
 											</div>
 											<div class="col-md-12">
 												<div class="form-group">
-													<input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone">
+													<input type="tel" class="form-control" name="phone" id="phone" maxlength="10" placeholder="Phone">
 												</div>
 											</div>
 											<div class="col-md-12">
@@ -106,11 +106,18 @@
 		</div>
 	</section>
 <center><p style="color: 121212;">Website By KRANTHI DEV SAI</p></center>
+<script>("#phone").keyup(function(){
+    var prefix = "+91"
+
+    if(this.value.indexOf(prefix) !== 0 ){
+        this.value = prefix + this.value;
+    }
+});</script>
 	<script src="./static/jquery.min.js"></script>
-  <script src="./static/popper.js"></script>
-  <script src="./static/bootstrap.min.js"></script>
-  <script src="./static/jquery.validate.min.js"></script>
-  <script src="./static/main.js"></script>
+  	<script src="./static/popper.js"></script>
+  	<script src="./static/bootstrap.min.js"></script>
+  	<script src="./static/jquery.validate.min.js"></script>
+  	<script src="./static/main.js"></script>
 
 	</body>
 </html>
